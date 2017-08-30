@@ -53,6 +53,10 @@ else
 end
 
 
+Ax=Ax+we*conv2(weight_x.*conv2(x,fliplr(flipud(dxf)),'valid'),dxf);
+Ax=Ax+we*conv2(weight_y.*conv2(x,fliplr(flipud(dyf)),'valid'),dyf);
+Ax=Ax+we*(conv2(weight_xx.*conv2(x,fliplr(flipud(dxxf)),'valid'),dxxf));
+Ax=Ax+we*(conv2(weight_yy.*conv2(x,fliplr(flipud(dyyf)),'valid'),dyyf));
 Ax=Ax+we*(conv2(weight_xy.*conv2(x,fliplr(flipud(dxyf)),'valid'),dxyf));
 
 
